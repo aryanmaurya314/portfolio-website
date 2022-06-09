@@ -12,10 +12,17 @@
         background-color: #34B3F1;
         height: 95%;
 
+        @include mobile {
+            flex-direction: column;
+        }
 
         .left {
             flex: 1;
             overflow: hidden;
+
+            @include mobile {
+                display: none;
+            }
 
             .imgContainer {
                 height: 450px;

@@ -1,0 +1,130 @@
+@import "../../global.scss";
+
+.testimonials {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    @include mobile{
+        justify-content: space-around;
+        padding-top: 25px;
+    }
+
+    h1 {
+        font-size: 55px;
+        overflow: hidden;
+
+        @include mobile {
+            font-size: 20px;
+        }
+    }
+
+    .container {
+        height: 80%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include mobile {
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .card {
+            width: 250px;
+            height: 70%;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px -8px black;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 20px;
+            transition: all 1s ease;
+
+            @include mobile {
+                height: 180px;
+                margin: 10px 0px;
+            }
+
+            &.featured {
+                width: 300px;
+                height: 75%;
+                margin: 0 30px;
+
+                @include mobile {
+                    width: 250px;
+                    height: 180px;
+                    margin: 1px;
+                }
+            }
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            .top {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+
+                    &.left,
+                    &.right {
+                        height: 25px;
+                    }
+
+                    &.user {
+                        height: 60px;
+                        width: 60px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                        margin: 0 30px;
+
+                        @include mobile {
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+                }
+            }
+
+            .center {
+                padding: 10px;
+                border-radius: 10px;
+                background-color: rgb(248, 238, 241);
+
+                @include mobile {
+                    font-size: 12px;
+                    padding: 5px;
+                }
+            }
+
+            .bottom {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+
+                h3 {
+                    margin-bottom: 5px;
+
+                    @include mobile {
+                        font-size: 14px;
+                    }
+                }
+
+                h4 {
+                    color: rgb(150, 148, 148);
+
+                    @include mobile {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+}
